@@ -72,18 +72,15 @@ public class maze {
 		}
 		
 		assignMazeValues(); //extracted method for assign values.
-		
-		setMazeValues();
+		setMazeValues(); //method extracted for assigning maze values and cloning the maze.
 	}
 
 	private static void setMazeValues() {
 		//maze values
 		int[][] tempMaze = new int[sizex][sizey];
 		int a = 6; //value to start at the maze path numbers in the list
-		int i;
-		int j;
-		for (i=0; i<sizex; i++) {
-			for (j=0; j<sizey; j++) {
+		for (int i=0; i<sizex; i++) { //removed int i; int j; to remove lines.
+			for (int j=0; j<sizey; j++) {
 				tempMaze[i][j] = (int)nums.get(a);
 				a++;
 			}
