@@ -21,17 +21,7 @@ public class maze {
 	
 	//MAIN METHOD
 	public static void main(String[] args) {
-		//PRINT TEXT AND MAZES
-		System.out.println("Mr. MazeSolver: Reading Maze. . . ");
-		readMaze();
-		System.out.println("Mr. MazeSolver: Maze read!");
-		System.out.println();
-		System.out.println("Unsolved Maze:");
-		printMaze();
-		System.out.println("Mr. MazeSolver: Solving Maze. . . ");
-		System.out.println("Mr. MazeSolver: Taking all possible routes. . . ");
-		System.out.println("Mr. MazeSolver: Getting lost. . .");
-		System.out.println();
+		preSolveMessages();
 		
 		if (solve(maze, startPointx, startPointy)) {
 			//PRINT IF THE MAZE WAS SOLVED
@@ -51,6 +41,20 @@ public class maze {
 			System.out.println("Mr. MazeSolver: Sorry! Your maze is broken!");
 		}
 		
+	}
+
+	private static void preSolveMessages() {
+		//PRINT TEXT AND MAZES
+		System.out.println("Mr. MazeSolver: Reading Maze. . . ");
+		readMaze();
+		System.out.println("Mr. MazeSolver: Maze read!");
+		System.out.println();
+		System.out.println("Unsolved Maze:");
+		printMaze();
+		System.out.println("Mr. MazeSolver: Solving Maze. . . ");
+		System.out.println("Mr. MazeSolver: Taking all possible routes. . . ");
+		System.out.println("Mr. MazeSolver: Getting lost. . .");
+		System.out.println();
 	}
 	
 	//READ MAZE AND STORE VALUES
