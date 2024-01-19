@@ -23,6 +23,11 @@ public class maze {
 	public static void main(String[] args) {
 		preSolveMessages();
 		
+		postSolveMessages();
+		
+	}
+
+	private static void postSolveMessages() {
 		if (solve(maze, startPointx, startPointy)) {
 			//PRINT IF THE MAZE WAS SOLVED
 			System.out.println("Mr. MazeSolver: Maze Solved!");
@@ -40,7 +45,6 @@ public class maze {
 		else {
 			System.out.println("Mr. MazeSolver: Sorry! Your maze is broken!");
 		}
-		
 	}
 
 	private static void preSolveMessages() {
