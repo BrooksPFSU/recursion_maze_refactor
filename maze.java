@@ -154,18 +154,22 @@ public class maze {
 				returnValue = solve(maze, r, c+1);
 			}
 			
-			if (returnValue) {
-				//ADD SPOTS TO A STACK FOR PRINTING LATER
-				xPoints.push(r);
-				yPoints.push(c);
-				maze[r][c] = 8;
-			}
+			storeCoordinate(maze, r, c, returnValue); //method extracted for storing coordinates.
 			
 			return returnValue;
 			
 		}
 		
 		return false;
+	}
+
+	private static void storeCoordinate(int[][] maze, int r, int c, boolean returnValue) {
+		if (returnValue) {
+			//ADD SPOTS TO A STACK FOR PRINTING LATER
+			xPoints.push(r);
+			yPoints.push(c);
+			maze[r][c] = 8;
+		}
 	}
 	
 	//PRINT THE FINAL PATH TAKEN
