@@ -73,6 +73,10 @@ public class maze {
 		
 		assignMazeValues(); //extracted method for assign values.
 		
+		setMazeValues();
+	}
+
+	private static void setMazeValues() {
 		//maze values
 		int[][] tempMaze = new int[sizex][sizey];
 		int a = 6; //value to start at the maze path numbers in the list
