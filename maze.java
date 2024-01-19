@@ -48,14 +48,10 @@ public class maze {
 		//PRINT TEXT AND MAZES
 		System.out.println("Mr. MazeSolver: Reading Maze. . . ");
 		readMaze();
-		System.out.println("Mr. MazeSolver: Maze read!");
-		System.out.println();
-		System.out.println("Unsolved Maze:");
+		System.out.println("Mr. MazeSolver: Maze read! \n\nUnsolved Maze:"); // \n\n added to combine three lines of code.
 		printMaze();
-		System.out.println("Mr. MazeSolver: Solving Maze. . . ");
-		System.out.println("Mr. MazeSolver: Taking all possible routes. . . ");
-		System.out.println("Mr. MazeSolver: Getting lost. . .");
-		System.out.println();
+		System.out.println("Mr. MazeSolver: Solving Maze. . . \nMr. MazeSolver: Taking all possible routes. . . " +
+				"\nMr. MazeSolver: Getting lost. . .\n"); //\n added to combine three print lines.
 	}
 	
 	//READ MAZE AND STORE VALUES
@@ -175,7 +171,7 @@ public class maze {
 			System.out.println("" + xPoints.pop() + ", " + yPoints.pop());
 		}
 		//ENSURE THE END POINTS ARE PRINTED TOO
-		System.out.println(endPointx + ", " + endPointy);
+		System.out.println(endPointx + ", " + endPointy + "\n");
 	}
 	
 	//PRINT OUT FUN MESSAGE
