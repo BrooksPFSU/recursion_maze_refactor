@@ -18,6 +18,7 @@ public class maze {
 	static Stack<Integer> xPoints = new Stack<Integer>();
 	static Stack<Integer> yPoints = new Stack<Integer>();
 	static Random rand = new Random();
+	static ArrayList<Integer> nums = new ArrayList<Integer>(); //item placed in class to be accessed by multiple methods.
 	
 	//MAIN METHOD
 	public static void main(String[] args) {
@@ -56,9 +57,6 @@ public class maze {
 	
 	//READ MAZE AND STORE VALUES
 	public static void readMaze() {
-		//list to store values
-		ArrayList<Integer> nums = new ArrayList<Integer>();
-		
 		//read the file and store the values
 		try {
 			File myObj = new File("src/maze.txt");
@@ -73,18 +71,7 @@ public class maze {
 			e.printStackTrace();
 		}
 		
-		//ASSIGN VALUES
-		//size values
-		sizex = (int)nums.get(0);
-		sizey = (int)nums.get(1);
-		
-		//start points
-		startPointx = (int)nums.get(2);
-		startPointy = (int)nums.get(3);
-		
-		//end points
-		endPointx = (int)nums.get(4);
-		endPointy = (int)nums.get(5);
+		assignMazeValues(); //extracted method for assign values.
 		
 		//maze values
 		int[][] tempMaze = new int[sizex][sizey];
@@ -99,6 +86,21 @@ public class maze {
 		}
 		
 		maze = tempMaze.clone(); //set main maze to tempMaze clone created maze
+	}
+
+	private static void assignMazeValues() {
+		//ASSIGN VALUES
+		//size values
+		sizex = (int)nums.get(0);
+		sizey = (int)nums.get(1);
+		
+		//start points
+		startPointx = (int)nums.get(2);
+		startPointy = (int)nums.get(3);
+		
+		//end points
+		endPointx = (int)nums.get(4);
+		endPointy = (int)nums.get(5);
 	}
 	
 	//PRINT THE MAZE
