@@ -21,24 +21,21 @@ public class maze {
 	
 	//MAIN METHOD
 	public static void main(String[] args) {
-		preSolveMessages();
-		
-		postSolveMessages();
+		solveMaze(); //messages and read maze call extracted to solveMaze()
+		postSolveMessages(); //post solve messages extracted to postSolveMessages()
 		
 	}
 
 	private static void postSolveMessages() {
 		if (solve(maze, startPointx, startPointy)) {
 			//PRINT IF THE MAZE WAS SOLVED
-			System.out.println("Mr. MazeSolver: Maze Solved!");
-			System.out.println("Solved Maze:");
+			System.out.println("Mr. MazeSolver: Maze Solved! \nSolved Maze:"); // \n changed to make new line.
 			printMaze();
-			System.out.println("8 = Final Path Taken, 2 = Path Taken");
-			System.out.println();
-			System.out.println();
-			System.out.println("Mr. MazeSolver: Here is a list of the maze points taken in the final path!");
-			printPath();
-			System.out.println();
+			System.out.println("8 = Final Path Taken, 2 = Path Taken \n\n " 
+					+ "\nMr. MazeSolver: Here is a list of the maze points taken in the final path!"); 
+			// \n\n added to remove two empty print lines and consolidate print lines.
+
+			printPath(); // \n added to end of messages in printPath().
 			finalMessage();
 		}
 		//PRINT IF THE MAZE WAS NOT SOLVED
@@ -47,7 +44,7 @@ public class maze {
 		}
 	}
 
-	private static void preSolveMessages() {
+	private static void solveMaze() {
 		//PRINT TEXT AND MAZES
 		System.out.println("Mr. MazeSolver: Reading Maze. . . ");
 		readMaze();
